@@ -1,0 +1,22 @@
+{
+	"title": "LAN Discovery",
+	"author": "maji",
+	"category_id": "1",
+	"godot_version": "4.2",
+	"mpc_version": "1.1.0",
+	"support_level": "official",
+	"cost": "MIT",
+	"version": "1",
+	"version_string": "1.0.0",
+	"icon_url": "https://raw.githubusercontent.com/maji-git/mpc-addon-discovery/main/icon.png",
+	"description": "LAN Discovery addon for MultiPlay Core",
+	"download_branch": "master",
+	"previews": [
+		{
+			"preview_id": "1",
+			"type": "image",
+			"link": "https://raw.githubusercontent.com/maji-git/mpc-addon-discovery/main/thumb.png",
+			"thumbnail": "https://raw.githubusercontent.com/maji-git/mpc-addon-discovery/main/thumb.png"
+		}
+	]
+}

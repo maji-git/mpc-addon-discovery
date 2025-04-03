@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtoin0v6ik38q"]
+
+[ext_resource type="Script" path="res://addons/MultiplayCore/MultiPlay.gd" id="1_bl1tu"]
+[ext_resource type="Script" path="res://mpc-addons/MPDiscovery/demo/DiscoverManager.gd" id="1_qj5mk"]
+[ext_resource type="Script" path="res://mpc-addons/MPDiscovery/MPDiscovery.gd" id="2_yvnrl"]
+[ext_resource type="Script" path="res://addons/MultiplayCore/net_protocols/ENetProtocol.gd" id="3_odmlk"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("discovery")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qj5mk")
+discovery = NodePath("MultiPlayCore/MPDiscovery")
+
+[node name="MultiPlayCore" type="Node" parent="."]
+script = ExtResource("1_bl1tu")
+max_players = 10
+swap_input_action = "a"
+
+[node name="MPDiscovery" type="Node" parent="MultiPlayCore"]
+script = ExtResource("2_yvnrl")
+
+[node name="ENetProtocol" type="Node" parent="MultiPlayCore"]
+script = ExtResource("3_odmlk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Server Discovery Demo"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Listing" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

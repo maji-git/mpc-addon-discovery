@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://daib5dbtgxow1"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(0, 80)
+
+[node name="URLLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 93.0
+offset_bottom = 39.0
+text = "URL:PORT"
+
+[node name="PlayerCount" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 38.0
+offset_right = 93.0
+offset_bottom = 61.0
+text = "0/2"
+
+[node name="UIDLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 62.0
+offset_right = 93.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 8
+text = "UID: "
+
+[node name="PingMs" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -142.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 39.0
+grow_horizontal = 0
+text = "Ping: 0ms"
+horizontal_alignment = 2
+
+[node name="JoinBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -39.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Join"
