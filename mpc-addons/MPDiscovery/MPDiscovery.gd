@@ -13,14 +13,20 @@ class_name MPDiscovery
 var server_metadata := {}
 ## Server Unique ID
 var server_uid = ""
+## LAN UDPServer for broadcasting
 var lan_server: UDPServer
+## LAN PacketPeerUDP for scanning
 var lan_client: PacketPeerUDP
+## Determines if network is broadcasting
 var broadcasting := false
+## Determines if scanning is in process
 var scanning := false
+## The scan timer node
 var scan_timer: Timer
 # Discovered server UIDs
 var _discovered_uid = []
 
+## On server found on local network
 signal server_found(data: DiscoveredServer)
 
 # Called when the node enters the scene tree for the first time.
